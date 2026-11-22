@@ -1,0 +1,12 @@
+USE master;
+GO
+
+IF DB_ID(N'F1Silverstone') IS NULL
+BEGIN
+    CREATE DATABASE F1Silverstone;
+END;
+GO
+
+ALTER DATABASE F1Silverstone SET RECOVERY SIMPLE;
+GO
+

@@ -1,0 +1,40 @@
+{
+  "mssql.connections": [
+    {
+      "id": "f1-silverstone-docker-local",
+      "groupId": "ROOT",
+      "profileName": "F1 Silverstone Docker",
+      "server": "localhost,1433",
+      "database": "F1Silverstone",
+      "user": "sa",
+      "authenticationType": "SqlLogin",
+      "encrypt": "Mandatory",
+      "trustServerCertificate": true,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql",
+      "applicationIntent": "ReadWrite",
+      "savePassword": false,
+      "profileSource": 0,
+      "containerName": "sqlserver-express",
+      "password": ""
+    }
+  ],
+  "files.associations": {
+    "*.sql": "sql"
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "github.copilot.enable": {
+    "*": true,
+    "sql": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "[sql]": {
+    "editor.inlineSuggest.enabled": false,
+    "github.copilot.nextEditSuggestions.enabled": false
+  }
+}
+

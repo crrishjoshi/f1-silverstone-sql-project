@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+.env
+.vscode/*.code-workspace
+data/import/
+__pycache__/
+*.pyc
+

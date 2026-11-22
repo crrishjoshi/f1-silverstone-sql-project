@@ -1,0 +1,21 @@
+race_id,driver_id,constructor_id,car_number,grid_position,finish_position,position_text,points,laps_completed,status,race_time_ms,race_time_text,fastest_lap_rank,fastest_lap_number,fastest_lap_time_ms,fastest_lap_speed_kph
+202412,hamilton,mercedes,44,2,1,1,25,52,Finished,4947059,1:22:27.059,5,45,89438,237.120
+202412,max_verstappen,red_bull,1,4,2,2,18,52,Finished,4948524,+1.465,3,48,88952,238.416
+202412,norris,mclaren,4,3,3,3,15,52,Finished,4954606,+7.547,4,43,89262,237.588
+202412,piastri,mclaren,81,5,4,4,12,52,Finished,4959488,+12.429,2,51,88748,238.964
+202412,sainz,ferrari,55,7,5,5,11,52,Finished,4994377,+47.318,1,52,88293,240.195
+202412,hulkenberg,haas,27,6,6,6,8,52,Finished,5002781,+55.722,10,43,89836,236.070
+202412,stroll,aston_martin,18,8,7,7,6,52,Finished,5003628,+56.569,11,46,89897,235.909
+202412,alonso,aston_martin,14,10,8,8,4,52,Finished,5010636,+1:03.577,7,47,89710,236.401
+202412,albon,williams,23,9,9,9,2,52,Finished,5015446,+1:08.387,8,52,89718,236.380
+202412,tsunoda,rb,22,13,10,10,1,52,Finished,5026362,+1:19.303,14,43,90229,235.041
+202412,sargeant,williams,2,12,11,11,0,52,Finished,5036019,+1:28.960,12,42,89972,235.713
+202412,kevin_magnussen,haas,20,17,12,12,0,52,Finished,5037212,+1:30.153,13,42,90093,235.396
+202412,ricciardo,rb,3,15,13,13,0,51,Lapped,4956996,+9.937,15,47,90735,233.731
+202412,leclerc,ferrari,16,11,14,14,0,51,Lapped,4987532,+40.473,9,43,89748,236.301
+202412,bottas,sauber,77,16,15,15,0,51,Lapped,4988880,+41.821,18,44,91277,232.343
+202412,ocon,alpine,31,18,16,16,0,50,Lapped,4957741,+10.682,16,46,90875,233.371
+202412,perez,red_bull,11,20,17,17,0,50,Lapped,4965064,+18.005,6,50,89707,236.409
+202412,zhou,sauber,24,14,18,18,0,50,Lapped,5001535,+54.476,17,43,91014,233.014
+202412,russell,mercedes,63,1,19,R,0,33,Retired,,,19,3,91298,232.289
+202412,gasly,alpine,10,19,20,W,0,0,Did not start,,,,,,
