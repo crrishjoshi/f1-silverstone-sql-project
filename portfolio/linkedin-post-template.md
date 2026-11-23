@@ -1,48 +1,23 @@
-# LinkedIn post drafting template — UNPUBLISHED
+# LinkedIn post copy
 
-**Status: do not post yet.** Complete it in your own words after the Tableau dashboard and final findings are finished and verified.
+I’ve completed the SQL phase of an independent portfolio project analysing public 2024 British Grand Prix data.
 
-## Opening
+The aim was not to claim access to team telemetry or reduce driver performance to one number. I wanted to practise turning a stakeholder question into a reproducible analysis while being clear about data quality, assumptions and limitations.
 
-I built an independent SQL Server project using public 2024 British Grand Prix data to practise turning a motorsport question into a reproducible analysis.
+What I completed:
 
-## The problem
+- Built a relational SQL Server database in Docker from six public race-data tables.
+- Used joins, grouped aggregates, CTEs, NOT EXISTS, STDEV() and RANK().
+- Checked row grain, duplicate risk and NULL handling.
+- Created a documented cleaning rule that removes lap 1, pit-stop laps, the immediately following laps and unusually slow laps outside a driver-specific threshold.
+- Verified every numbered exercise against the database before publishing the repository.
 
-[Explain why raw average lap time can be misleading and state the stakeholder question.]
+I also deliberately leveraged AI while learning SQL. I used it as an on-demand tutor and debugging partner to explain unfamiliar concepts, challenge my reasoning and help structure the project into small, step-by-step tasks. I completed the hands-on analysis myself and made sure I could explain the joins, filters, aggregations and assumptions rather than treating AI output as a substitute for understanding.
 
-## What I did
+The next phase will be a Tableau dashboard, which I will add separately after validating the visualisations and findings.
 
-- Loaded public results, lap timing and pit-stop data into a relational SQL Server database running in Docker.
-- [Describe the joins and validation you personally completed.]
-- [State your cleaned-lap rule accurately.]
-- [Mention the visual or table you created, if one exists.]
-
-## Findings
-
-1. [Verified finding with exact evidence.]
-2. [Verified finding with exact evidence.]
-3. [Verified finding with exact evidence.]
-
-## What I learned
-
-[Explain one SQL lesson and one Business Analyst lesson—for example, data quality, assumptions, requirements or communication.]
-
-## How I used AI
-
-I used AI as an on-demand tutor and debugging partner to explain unfamiliar concepts, diagnose errors and verify query outputs. I treated the AI responses as learning prompts: I questioned the logic, applied the corrections and made sure I could explain the finished SQL rather than presenting generated code without understanding it.
-
-## Limitations
-
-[State that the public dataset does not include all strategic context, such as tyres, weather, traffic, fuel load, damage or confidential telemetry.]
-
-## Attribution
+GitHub: https://github.com/crrishjoshi/f1-silverstone-sql-project
 
 Race timing, result and pit-stop data: Jolpica F1 API, used under CC BY-NC-SA 4.0. Independent educational analysis; not affiliated with Formula 1 or any team.
 
-## Suggested evidence to attach
-
-- A simple schema diagram
-- One readable query—not an entire wall of SQL
-- One chart with a clear title and units
-- A link to the GitHub repository and its methodology
-
+#SQL #BusinessAnalysis #DataAnalysis #Motorsport #LearningInPublic

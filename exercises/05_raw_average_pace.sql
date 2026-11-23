@@ -28,9 +28,9 @@ GO
 
 -- Write your query below this line.
 
-SELECT COUNT(*) AS recorded_laps, 
-    CONCAT(drivers.given_name, ' ', drivers.family_name) AS full_name,
-       AVG(lap_time_seconds) AS raw_average_seconds
+SELECT CONCAT(drivers.given_name, ' ', drivers.family_name) AS full_name,
+       COUNT(*) AS recorded_laps,
+       ROUND(AVG(lap_time_seconds), 3) AS raw_average_seconds
 FROM f1.lap_times AS lap_times
 INNER JOIN f1.drivers AS drivers
 ON lap_times.driver_id = drivers.driver_id

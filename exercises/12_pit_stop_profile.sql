@@ -27,12 +27,14 @@ USE F1Silverstone;
 GO
 
 -- Write your query below this line.
+-- COUNT(*) counts every published stop record; COUNT(duration_seconds) ignores the one NULL duration.
+-- The duration is a published pit-stop duration, not proven stationary tyre-change time.
 SELECT CONCAT (drv.given_name,' ',drv.family_name) as full_name,
 COUNT (*) as stop_count,
 COUNT(ps.duration_seconds) as durations_reported,
 ROUND(AVG(ps.duration_seconds),3) as average_duration_seconds,
 MIN(ps.duration_seconds) as quickest_duration_seconds
-FROM f1.pit_stops as ps 
+FROM f1.pit_stops as ps
 JOIN f1.drivers as drv
 ON ps.driver_id=drv.driver_id
 GROUP BY drv.given_name,drv.family_name

@@ -25,14 +25,14 @@ USE F1Silverstone;
 GO
 
 -- Write your query below this line.
-SELECT * FROM f1.constructors;
-
-SELECT * FROM f1.drivers;
-
-SELECT * FROM f1.lap_times;
-
-SELECT * FROM f1.pit_stops;
-
-SELECT * FROM f1.races;
-
-SELECT * FROM f1.race_results;
+SELECT 'races' AS table_name, COUNT(*) AS row_count FROM f1.races
+UNION ALL
+SELECT 'drivers', COUNT(*) FROM f1.drivers
+UNION ALL
+SELECT 'constructors', COUNT(*) FROM f1.constructors
+UNION ALL
+SELECT 'race_results', COUNT(*) FROM f1.race_results
+UNION ALL
+SELECT 'lap_times', COUNT(*) FROM f1.lap_times
+UNION ALL
+SELECT 'pit_stops', COUNT(*) FROM f1.pit_stops;

@@ -24,14 +24,12 @@ USE F1Silverstone;
 GO
 
 -- Write your query below this line.
-SELECT 
-drivers.driver_id,
-d.finish_position,
-d.race_time_ms,
-c.constructor_name
-FROM f1.race_results as d 
-LEFT JOIN f1.drivers as drivers 
-ON d.driver_id = drivers.driver_id
-LEFT JOIN f1.constructors as c
-ON d.constructor_id = c.constructor_id
-ORDER BY d.finish_position ASC;
+SELECT
+    CONCAT(d.given_name, ' ', d.family_name) AS full_name,
+    rr.grid_position,
+    rr.finish_position,
+    rr.status
+FROM f1.race_results AS rr
+INNER JOIN f1.drivers AS d
+    ON d.driver_id = rr.driver_id
+ORDER BY rr.finish_position ASC;

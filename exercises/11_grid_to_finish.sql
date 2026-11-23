@@ -27,11 +27,12 @@ GO
 SELECT CONCAT(d.given_name, ' ', d.family_name) AS full_name,
        rs.grid_position,
        rs.finish_position,
-        CASE 
+       rs.status,
+        CASE
         WHEN rs.status IN ('Finished', 'Lapped')
         THEN CAST (rs.grid_position AS INT) - CAST (rs.finish_position as INT)
         ELSE NULL
         END AS positions_changed
-    FROM f1.race_results rs 
-    JOIN f1.drivers d 
-    ON rs.driver_id=d.driver_id
+    FROM f1.race_results rs
+    JOIN f1.drivers d
+    ON rs.driver_id=d.driver_id;

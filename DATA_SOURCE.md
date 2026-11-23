@@ -37,9 +37,9 @@ If the project later becomes commercial, do not assume this data licence still p
 - A slow lap is not automatically poor driver performance. It may reflect traffic, changing conditions, race control or strategy.
 - Average lap time alone is a weak performance measure. The project therefore compares raw averages with a clearly defined cleaned-lap method.
 - Drivers completed different numbers of laps, and some retired or did not start. Results must be interpreted in context.
-- Average lap times can be skewed if some cars did great laps and then retired early 
-- Drivers lap times can increase if they get a tow when they are behind someone and may decrease if they are in a wheel to wheel battle 
-- Some of lap times may be deleted due to drivers leaving the track and gaining an advantage 
+- Average lap times can be skewed when drivers record a small number of quick laps before retiring.
+- Lap times may be affected by a tow, traffic or wheel-to-wheel racing.
+- Published timing may not reveal every deleted lap or track-limits decision.
 
 These limitations should appear in the final portfolio write-up. Identifying them is part of the analysis, not a weakness to hide.
 

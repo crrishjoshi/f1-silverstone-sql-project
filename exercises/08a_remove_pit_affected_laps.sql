@@ -42,7 +42,7 @@ AND NOT EXISTS(
   AND ps.driver_id=lt.driver_id
   AND ps.lap_number IN (
     lt.lap_number,
-    lt.lap_number +1 
+	    lt.lap_number - 1
   )
 
 )

@@ -29,16 +29,16 @@ GO
 -- Write your query below this line.
 
 SELECT CONCAT(drivers.given_name, ' ', drivers.family_name) AS full_name,
-f1.pit_stops.lap_number,
 f1.pit_stops.stop_number,
+f1.pit_stops.lap_number,
 f1.pit_stops.duration_seconds,
 f1.lap_times.lap_time_seconds
-       FROM f1.pit_stops 
+       FROM f1.pit_stops
        JOIN f1.lap_times
          ON pit_stops.race_id = lap_times.race_id
 AND pit_stops.driver_id = lap_times.driver_id
 AND pit_stops.lap_number = lap_times.lap_number
-         
+
          JOIN f1.drivers
             ON pit_stops.driver_id = drivers.driver_id
 

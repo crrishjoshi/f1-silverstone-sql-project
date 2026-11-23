@@ -32,12 +32,12 @@ WITH personal_best AS (
         MIN(lap_time_seconds) best_lap_second
         FROM f1.lap_times
         GROUP BY driver_id
-    
+
 )
 SELECT CONCAT(drivers.given_name, ' ', drivers.family_name) AS full_name,
-        pb.best_lap_second,
-        threshold_107_seconds = ROUND(pb.best_lap_second *1.07,3)
-    
+        ROUND(pb.best_lap_second, 3) AS best_lap_seconds,
+        ROUND(pb.best_lap_second * 1.07, 3) AS threshold_107_seconds
+
     FROM f1.drivers AS drivers
     JOIN personal_best AS pb
-    ON drivers.driver_id = pb.driver_id
+    ON drivers.driver_id = pb.driver_id;

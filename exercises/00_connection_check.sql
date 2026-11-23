@@ -24,4 +24,7 @@ USE F1Silverstone;
 GO
 
 -- Write your query below this line.
-
+SELECT
+    DB_NAME() AS database_name,
+    @@VERSION AS server_version,
+    CAST(GETDATE() AS date) AS checked_on;

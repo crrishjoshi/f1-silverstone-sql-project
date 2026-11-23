@@ -6,15 +6,20 @@ The point is not to pretend to be an F1 performance engineer. It is to demonstra
 
 ## Current status
 
-The SQL phase is complete and has been verified against the local SQL Server database. A Tableau dashboard and the final evidence-backed findings are still in progress. The project should not be presented as a finished public analysis until that visual and its interpretations have been checked.
+The SQL project is complete and has been verified against the local SQL Server database. A Tableau dashboard is planned as a separate next phase and is not included in this release.
 
 ## Business question
 
 > How can a race-performance stakeholder compare driver pace and consistency without allowing pit-affected or unusually slow laps to distort the conclusion?
- - The simplest solution would be removing the laps where the car enters the pit and leaves the pit 
- - Removing lap times where lap time where intervened due to some incident on that track that cause a yellow flag ,Virtual Safety Car or a Full Safety Car.
- - One more small thing we could do would be removing the time of the first lap as they dont carry that much when starting but laps after that they carry speed when starting the next lap 
- - Categroizing or Seperating lap times according to different tyre compounds 
+
+The documented cleaning rule:
+
+- removes lap 1 because its standing-start conditions are not comparable with a normal racing lap;
+- excludes each published pit-stop lap and the immediately following lap;
+- retains laps no slower than 107% of that driver's quickest recorded lap; and
+- treats the result as a comparison aid, not proof of driver ability.
+
+The public data does not contain tyre compounds or reliable safety-car, traffic, fuel-load and damage context, so those factors are limitations rather than filters claimed by the analysis.
 ## Why this race
 
 - One race is small enough to understand and explain confidently.
@@ -68,7 +73,7 @@ To deliberately retrieve the source again, run `python3 scripts/fetch_and_prepar
 - Any filtering rule is explained in plain English.
 - A finding distinguishes evidence from interpretation.
 
-Complete queries are intentionally not included beside the tasks. Attempt each task first, then ask for it to be marked. Equivalent correct solutions count.
+Each numbered file retains its task description and completed learner query so the progression can be inspected. Equivalent correct solutions count; the important test is whether the output and reasoning meet the stated requirement.
 
 ## Responsible portfolio use
 

@@ -24,4 +24,14 @@ USE F1Silverstone;
 GO
 
 -- Write your query below this line.
-
+SELECT
+    CONCAT(d.given_name, ' ', d.family_name) AS full_name,
+    c.constructor_name,
+    rr.finish_position,
+    rr.points
+FROM f1.race_results AS rr
+INNER JOIN f1.drivers AS d
+    ON d.driver_id = rr.driver_id
+INNER JOIN f1.constructors AS c
+    ON c.constructor_id = rr.constructor_id
+ORDER BY c.constructor_name, rr.finish_position;

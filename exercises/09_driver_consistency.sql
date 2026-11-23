@@ -26,11 +26,11 @@ GO
 -- Write your query below this line.
 WITH personal_best AS (
     SELECT driver_id,
-    
+
         MIN(lap_time_seconds) best_lap_second
         FROM f1.lap_times
         GROUP BY driver_id
-    
+
  ) ,
 
 pit_affected_lap AS (
@@ -48,7 +48,7 @@ AND NOT EXISTS(
   AND ps.driver_id=lt.driver_id
   AND ps.lap_number IN (
     lt.lap_number,
-    lt.lap_number - 1 
+    lt.lap_number - 1
   )
 )
 )
@@ -60,8 +60,9 @@ ROUND(STDEV(pit_affected_lap.lap_time_seconds),3)lap_time_stddev
 FROM f1.drivers as drivers
 JOIN personal_best as pb
 ON pb.driver_id=drivers.driver_id
-JOIN pit_affected_lap 
+JOIN pit_affected_lap
 ON pit_affected_lap.driver_id=drivers.driver_id
 WHERE pit_affected_lap.lap_time_seconds<= pb.best_lap_second * 1.07
 GROUP BY drivers.given_name,drivers.family_name
-ORDER BY lap_time_stddev
+HAVING COUNT(*) >= 20
+ORDER BY lap_time_stddev;

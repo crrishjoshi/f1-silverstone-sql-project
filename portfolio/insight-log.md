@@ -1,6 +1,6 @@
-# Evidence-backed insight log
+# Tableau dashboard insight log — planned next phase
 
-Complete this only after the supporting query has been checked.
+Complete this after the Tableau dashboard and its supporting SQL have been checked. It is intentionally left as a template in the SQL release.
 
 ## Insight 1
 

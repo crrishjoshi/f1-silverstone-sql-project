@@ -24,5 +24,12 @@ USE F1Silverstone;
 GO
 
 -- Write your query below this line.
-SELECT TOP 10 * FROM f1.race_results
+SELECT
+    driver_id,
+    finish_position,
+    points,
+    laps_completed,
+    status
+FROM f1.race_results
+WHERE finish_position BETWEEN 1 AND 10
 ORDER BY finish_position ASC;
